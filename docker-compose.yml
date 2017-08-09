@@ -1,0 +1,18 @@
+db:
+    image: postgres
+api:
+    build: ./projects/backend/
+    command: python3 manage.py runserver 0.0.0.0:8000
+    volumes:
+        - ./projects/backend:/code
+    ports:
+        - "8000:8000"
+    links:
+        - db
+web:
+    build: ./projects/frontend
+    command: "npm start"
+    volumes:
+        - ./projects/frontend:/code
+    ports:
+        - "9000:9000"

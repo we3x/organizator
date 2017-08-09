@@ -1,0 +1,20 @@
+{
+  "name": "organizat-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for simple application for organization time",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "echo \"Hello  world\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/we3x/organizator.git"
+  },
+  "author": "Veljko Simic <wex@tilda.center>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/we3x/organizator/issues"
+  },
+  "homepage": "https://github.com/we3x/organizator#readme"
+}
