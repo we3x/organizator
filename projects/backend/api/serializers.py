@@ -4,7 +4,7 @@ from rest_framework import serializers
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
-        fields = (id,name)
+        fields = (id,name,owner)
 
 class TicketSerializer(serializers.ModelSerializer):
     class Meta:
@@ -13,6 +13,7 @@ class TicketSerializer(serializers.ModelSerializer):
                   name,
                   description,
                   date,
-                  time,
+                  duration,
                   project,
+                  owner,
                  )
