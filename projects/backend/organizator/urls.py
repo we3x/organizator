@@ -19,5 +19,5 @@ from api import urls as api
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^/',include(api))
+    url(r'^api/',include(api))
 ]
