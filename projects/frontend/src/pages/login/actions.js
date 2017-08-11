@@ -27,7 +27,7 @@ const fail = createAction(LOGIN, error => ({
 const login = (email, password) =>
   (dispatch) => {
     dispatch(begin());
-    const apiUrl = 'localhost:8000';
+    const apiUrl = 'localhost:8000/api/v0';
     fetch({
       url: `${apiUrl}/auth/tokens`,
       body: {
