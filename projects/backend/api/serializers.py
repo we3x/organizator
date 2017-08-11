@@ -9,7 +9,7 @@ class ProjectSerializer(serializers.ModelSerializer):
 class TicketSerializer(serializers.ModelSerializer):
     class Meta:
         model = Ticket
-        fields = (id,
+        fields = ('id',
                   'name',
                   'description',
                   'date',
