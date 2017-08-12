@@ -3,7 +3,6 @@ from .serializers import *
 from .models import *
 from rest_framework.permissions import IsAuthenticated
 
-from rest_framework.response import Response
 
 # Create your views here.
 class TicketViewSet(viewsets.ModelViewSet):
