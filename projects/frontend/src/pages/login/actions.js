@@ -12,7 +12,7 @@ const begin = createAction(LOGIN, () => ({
 
 const success = createAction(LOGIN, json => {
   // eslint-disable-next-line no-undef
-  window.localStorage.OneLoveAuthToken = json.token;
+  window.localStorage.OrganizatorAuthToken = json.token;
   return {
     token: json.token,
     status: 'success',
@@ -24,14 +24,14 @@ const fail = createAction(LOGIN, error => ({
   status: 'error',
 }));
 
-const login = (email, password) =>
+const login = (username, password) =>
   (dispatch) => {
     dispatch(begin());
-    const apiUrl = 'localhost:8000/api/v0';
+    const apiUrl = 'http://localhost:8000';
     fetch({
-      url: `${apiUrl}/auth/tokens`,
+      url: `${apiUrl}/auth/`,
       body: {
-        email,
+        username,
         password,
       },
       contentType: 'application/json',

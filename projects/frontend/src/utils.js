@@ -2,7 +2,7 @@ import isomorphicFetch from 'isomorphic-fetch';
 
 export function getAuthToken() {
   // eslint-disable-next-line no-undef
-  return window.localStorage.MaterialUIStarter;
+  return window.localStorage.OrganizatorAuthToken;
 }
 
 export function isLoggedIn() {
