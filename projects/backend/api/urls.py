@@ -4,8 +4,8 @@ from .views import *
 
 router = DefaultRouter()
 
-router.register(r'Ticket',TicketViewSet)
-router.register(r'Project',ProjectViewSet)
+router.register(r'ticket',TicketViewSet)
+router.register(r'project',ProjectViewSet)
 
 urlpatterns = [
     url(

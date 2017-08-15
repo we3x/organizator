@@ -15,7 +15,7 @@ const styles = {
 class Settings extends Component {
   handleLogout() {
     // eslint-disable-next-line no-undef
-    window.localStorage.removeItem('MaterialUIStarter');
+    window.localStorage.removeItem('OrganizatorAuthToken');
     this.context.router.push(postLogoutURL);
   }
 

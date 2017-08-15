@@ -47,11 +47,11 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
+      username: '',
       password: '',
     };
-    this.handleEmailChange = (event) => {
-      this.setState({ email: event.target.value });
+    this.handleUsernameChange = (event) => {
+      this.setState({ username: event.target.value });
     };
 
     this.handlePasswordChange = (event) => {
@@ -60,7 +60,7 @@ class Login extends Component {
 
     this.handleSubmit = (event) => {
       event.preventDefault();
-      this.props.login(this.state.email, this.state.password);
+      this.props.login(this.state.username, this.state.password);
     };
 
     this.handleNotificationClose = () => {
@@ -99,8 +99,8 @@ class Login extends Component {
             <h1 style={styles.title}>Login</h1>
             <div>
               <TextField
-                floatingLabelText="Email"
-                onChange={this.handleEmailChange}
+                floatingLabelText="Username"
+                onChange={this.handleUsernameChange}
                 autoFocus
                 required
               />
