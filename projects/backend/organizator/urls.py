@@ -21,6 +21,6 @@ from rest_framework.authtoken import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/',include(api)),
-    url(r'^auth/',views.obtain_auth_token),# curl -v -H "Content-Type:application/json" -X POST http://localhost:8000/auth/ -d '{"username":"admin", "password": "kerlaje1234"}'
+    url(r'^auth/',views.obtain_auth_token),# curl -v -H "Content-Type:application/json" -X POST http://localhost:8000/auth/ -d '{"username":"admin", "password": "password"}'
 
 ]
