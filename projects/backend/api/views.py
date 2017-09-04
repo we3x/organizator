@@ -18,6 +18,9 @@ class TicketViewSet(viewsets.ModelViewSet):
         user = self.request.user
         return Ticket.objects.filter(owner=user)
 
+    def get_serializer_context(self):
+        return {'request': self.request}
+
 class ProjectViewSet(viewsets.ModelViewSet):
     authentication_classes = (SessionAuthentication, BasicAuthentication)
     permission_classes = (IsAuthenticated,IsOwnerOrNotShow,)
@@ -27,3 +30,6 @@ class ProjectViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         user = self.request.user
         return Project.objects.filter(owner=user)
+
+    def get_serializer_context(self):
+        return {'request': self.request}
