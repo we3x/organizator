@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import LogoutIcon from 'material-ui/svg-icons/action/input';
 import MenuItem from 'material-ui/MenuItem';
-import { postLogoutURL } from '../../../constants';
+/* import { postLogoutURL } from '../../../constants';*/
+import { withRouter } from 'react-router';
 
 const styles = {
   settings: {
@@ -12,15 +12,17 @@ const styles = {
   },
 };
 
+@withRouter
 class Settings extends Component {
   handleLogout() {
     // eslint-disable-next-line no-undef
     window.localStorage.removeItem('OrganizatorAuthToken');
-    this.context.router.push(postLogoutURL);
+    console.log(this);
   }
 
   render() {
     return (
+
       <MenuItem
         primaryText="Logout"
         leftIcon={<LogoutIcon />}
@@ -30,9 +32,5 @@ class Settings extends Component {
     );
   }
 }
-
-Settings.contextTypes = {
-  router: PropTypes.object.isRequired,
-};
 
 export default Settings;

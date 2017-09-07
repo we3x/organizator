@@ -93,12 +93,27 @@ class Template extends Component {
           />
           {this.props.settings}
         </Drawer>
+        <Drawer
+          open={this.props.settingsOpen}
+        >
+          <MenuItem
+            primaryText="&nbsp;"
+            style={styles.settings.item}
+            rightIcon={<CloseIcon onClick={this.handleCloseSettings} />}
+          />
+          {this.props.settings}
+        </Drawer>
         <AppBar
-          title="MaterialUI Starter"
+          title="Organizator"
           iconElementLeft={
-            <IconButton onTouchTap={this.handleHomeTouchTap} >
-              <HomeIcon />
-            </IconButton>
+            <div>
+              <IconButton onTouchTap={this.handleHomeTouchTap} >
+                <HomeIcon />
+              </IconButton>
+              <IconButton onTouchTap={this.handleOpenSettings} >
+                <ReorderIcon />
+              </IconButton>
+            </div>
                           }
           iconElementRight={
             <IconButton onTouchTap={this.handleOpenSettings} >
@@ -108,11 +123,6 @@ class Template extends Component {
         />
         <div style={styles.content}>
           {content}
-        </div>
-        <div style={styles.footer}>
-          Made by: <a href="http://tilda.center/" style={{ color: theme.footer.a.color }}>
-            Tilda Center
-          </a>
         </div>
       </div>
     );
